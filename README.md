@@ -16,7 +16,7 @@ Siga estas etapas para instalar as dependências e executar o aplicativo:
 1. Clone este repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/dedemalusco/musgas-ngrok.git
    
 Navegue até o diretório do projeto:
 
