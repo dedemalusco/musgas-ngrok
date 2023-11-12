@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página Inicial</title>
+</head>
+<body>
+    <h1>Musicas que ja foram pedidas</h1>
+    <ul>
+      <% data.forEach(item => { %>
+        <li><%= item.nome %> - <%= item.autor %></li>
+      <% }); %>
+    </ul>
+    
+</body>
+</html>

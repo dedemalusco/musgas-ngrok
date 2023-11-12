@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Musicas CEPI-VS</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Pedido de músicas</h1>
+    <form action="/submit" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" required><br>
+
+        <label for="autor">Autor:</label>
+        <input type="text" name="autor" id="autor" required><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <h1></h1>
+    <ul id="data-list">
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.get('/getData', function(data) {
+                data.forEach(function(item) {
+                    var listItem = document.createElement("li");
+                    listItem.innerHTML = "Nome: " + item.nome + ", Autor: " + item.autor;
+                    document.getElementById("data-list").appendChild(listItem);
+                });
+            });
+        });
+        
+    </script>
+    
+<script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
