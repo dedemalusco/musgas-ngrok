@@ -34,4 +34,33 @@ Execute o aplicativo:
 
 O aplicativo estará acessível em http://localhost:8000/.
 
-Certifique-se de substituir "seu-usuario" e "seu-repositorio" pelos detalhes específicos do seu repositório GitHub. Isso deve facilitar a inclusão dessas informações no seu README.md.
+# executar usando ngrok (localhost publico)
+
+siga o manual de indstalaçao do ngrok 
+
+https://ngrok.com/download
+
+extraia o arquivo e navegue até a pagina necessária
+
+cd ./Downloads/ngrok (ou algo do tipo)
+
+em seguida, execute o ngrok
+
+./ngrok http 8000
+
+envie esse comando no terminal linux no diretorio do ngrok, em seguida ele enviara de volta uma url, parabens, seu servidor em nodejs está hospedado, em planos gratuitos, os servidores mudarao de subdominio em toda reinicializaçao que tiver e nao podera ser escolhido um dominio, entretanto, o site te da um subdominio deles gratuitamente. é util para nao ter que ficar acessando varias url diferentes toda vez que reinciar o processo, vá para
+
+https://dashboard.ngrok.com/cloud-edge/domains
+
+e siga os manuais, assim que eles entrarem um dominio a voce, entre novamente no diretorio do ngrok e envie o comando (linux)
+
+./ngrok http -subdomain=seusubdominio 8000
+
+seu servidor que está hospedado no localhost:8000 estará disponivel gratuitamente para todos que acessarem a url "seudominio.ngrok-free.app"
+
+o ngrok funciona assim: ele pega oque estiver rodando na porta indicada na hora da execuçao e envia ele para uma url publica, ou seja, para iniciarmos o ngrok nao adianta só enviar 
+./ngrok http -subdomain=seusubdominio 8000
+
+precisamos primeiramente que estar rodando o arquivo server.js na porta 8000 para depois em outro aba do terminal enviar o 
+
+./ngrok http -subdomain=seusubdominio 8000
