@@ -64,3 +64,7 @@ o ngrok funciona assim: ele pega oque estiver rodando na porta indicada na hora 
 precisamos primeiramente que estar rodando o arquivo server.js na porta 8000 para depois em outro aba do terminal enviar o 
 
 ./ngrok http -subdomain=seusubdominio 8000
+
+
+# aviso!!
+o servidor provavelmente (certeza) nao funcionara a nao ser que voce coloque o seu banco de dados sql lite linkado no arquivo
